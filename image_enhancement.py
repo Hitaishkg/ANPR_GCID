@@ -40,3 +40,4 @@ high_res_image = model.predict(tf.expand_dims(low_res_image, axis=0))
 # Post-process the generated high-resolution image to remove any artifacts or noise
 high_res_image = tf.clip_by_value(high_res_image, 0, 1)
 high_res_image = tf.image.convert_image_dtype(high_res_image[0], dtype=tf.uint8)
+
