@@ -1,1 +1,1 @@
-cv2.imshow('hb',img)
+    print(json.dumps(response_json,indent=4))
