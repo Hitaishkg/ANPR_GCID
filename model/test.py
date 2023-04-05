@@ -5,7 +5,7 @@ def extract_plate():
 	img= cv2.imread(r"/home/vishnu/Documents/ANMR_GCID/model/images/test6.jpg")
 	plate_img=img.copy()
 	plate_cascade = cv2.CascadeClassifier('/home/vishnu/Documents/ANMR_GCID/model/numberplatemodel.xml')
-	plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.3, minNeighbors = 7)
+	plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.5, minNeighbors = 8)
 
 	for (x,y,w,h) in plate_rect:
 		a,b = (int(0.02*img.shape[0]), int(0.025*img.shape[1])) 
