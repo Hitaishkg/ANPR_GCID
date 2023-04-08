@@ -25,10 +25,10 @@ def CNN_model():
 
     (X_train, X_test, Y_train, Y_test) = train_test_split(X, Y, test_size=0.30, random_state=seed)
 
-    # one hot encode outputs
+    # one hot encode outputs  
     Y_test_for_accuracy_matrix = Y_test.copy()
-    Y_train = np_utils.to_categorical(Y_train)
-    Y_test = np_utils.to_categorical(Y_test)
+    Y_train = np.utils.to_categorical(Y_train)
+    Y_test = np.utils.to_categorical(Y_test)
 
     #reshaping data
     X_train = X_train.reshape(-1,28,28,1)
@@ -39,7 +39,7 @@ def CNN_model():
     print('done!!!')
     model_ = Sequential()
     model_.add(Conv2D(32, (24,24), input_shape=(28, 28, 1), activation='relu'))
-    model_.add(MaxPooling2D(pool_size=(2, 2)))
+    model_.add(MaxPool2D(pool_size=(2, 2)))
     model_.add(Dropout(0.4))
     model_.add(Flatten())
     model_.add(Dense(128, activation='relu'))

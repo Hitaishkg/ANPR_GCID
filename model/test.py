@@ -2,10 +2,10 @@ import cv2
 from prediction import ocr_text
 
 def extract_plate():
-	img= cv2.imread(r"/home/vishnu/Documents/ANMR_GCID/model/images/test6.jpg")
+	img= cv2.imread(r"/home/vishnu/Documents/ANMR_GCID/model/images/n45.jpeg")
 	plate_img=img.copy()
 	plate_cascade = cv2.CascadeClassifier('/home/vishnu/Documents/ANMR_GCID/model/numberplatemodel.xml')
-	plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.5, minNeighbors = 8)
+	plate_rect = plate_cascade.detectMultiScale(plate_img, scaleFactor = 1.05, minNeighbors = 7)
 
 	for (x,y,w,h) in plate_rect:
 		a,b = (int(0.02*img.shape[0]), int(0.025*img.shape[1])) 
@@ -26,6 +26,6 @@ try:
 	final_output=ocr_text(image_path)
 	print(final_output)
 except:
-	image_path='/home/vishnu/Documents/ANMR_GCID/model/images/test6.jpg'
+	image_path='/home/vishnu/Documents/ANMR_GCID/model/images/asb.png'
 	final_output=ocr_text(image_path)
 	print(final_output)
