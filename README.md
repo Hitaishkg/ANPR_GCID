@@ -1,1 +1,0 @@
-# ANMR_GCID number plate detection
