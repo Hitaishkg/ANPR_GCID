@@ -1,6 +1,7 @@
 import cv2
 from prediction import ocr_text
 from google_cloudocr import google_ocr
+# from prediction import ocr_text
 def extract_plate(img): # the function detects and perfors blurring on the number plate.
 	plate_img = img.copy()
 	

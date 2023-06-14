@@ -23,9 +23,10 @@ def ocr_text(image_path):
     # print(json.dumps(response_json,indent=4))
     data = json.loads(json_string)
     final_number=data['result'][0]['prediction'][0]['ocr_text']
-    # print(final_number)
+    print(final_number)
     return final_number
 # print(data['result'][0]['prediction'][0]['ocr_text'])
-
+image_path='/home/vishnu/Documents/ANMR_GCID/model/images/lisence_plate5.jpg'
+ocr_text(image_path)
 # print()
 # print(response.text)
