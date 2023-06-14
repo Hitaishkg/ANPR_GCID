@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../tenserflow object detection/tryfolder/images"
+		}
+	],
+	"settings": {}
+}
