@@ -4,7 +4,8 @@ from google_cloudocr import google_ocr
 # from prediction import ocr_text
 def extract_plate(img): # the function detects and perfors blurring on the number plate.
 	plate_img = img.copy()
-	
+
+
 	#Loads the data required for detecting the license plates from cascade classifier.
 	plate_cascade = cv2.CascadeClassifier(r"/home/vishnu/Documents/ANMR_GCID/model/numberplatemodel2.xml")
 
